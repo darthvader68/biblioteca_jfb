@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca CEEP - José Figueiredo Barreto</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>Biblioteca do CEEP</h1>
+            <h2>José Figueiredo Barreto</h2>
+        </div>
+
+        <button id="menu-toggle" class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <nav id="navigation">
+            <ul>
+                <li><a href="#" class="nav-link active"><i class="fas fa-home"></i> Página Inicial</a></li>
+                <li><a href="#" class="nav-link"><i class="fas fa-book"></i> Acervos</a></li>
+                <li><a href="#" class="nav-link"><i class="fas fa-graduation-cap"></i> Cursos</a></li>
+                <li><a href="#" class="nav-link"><i class="fas fa-file-alt"></i> TCCs</a></li>
+                <li><a href="#" class="cadastro_btn"><i class="fas fa-user-plus"></i> Cadastre-se!</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="left_side">
+            <div class="texto_principal">
+                <h2>Sejam bem-vindos ao nosso <span>Sistema de Consulta</span></h2>
+            </div>
+
+            <div class="search_box">
+                <div class="tabs">
+                    <button class="tab_btn active" data-tab="search">Pesquisar Livros</button>
+                    <button class="tab_btn" data-tab="contact">Contato</button>
+                </div>
+
+                <div id="search" class="tab_content active">
+                    <form id="search_form">
+                        <div class="input_group">
+                            <i class="fas fa-search icon"></i>
+                            <input type="text" placeholder="Título do livro">
+                        </div>
+                        <div class="input_group">
+                            <i class="fas fa-tag icon"></i>
+                            <select>
+                                <option value="">Categoria</option>
+                                <option value="literatura">Literatura</option>
+                                <option value="tecnico">Técnico</option>
+                                <option value="academico">Acadêmico</option>
+                            </select>
+                        </div>
+                        <div class="input_group">
+                            <i class="fas fa-check-circle icon"></i>
+                            <select>
+                                <option value="">Disponibilidade</option>
+                                <option value="disponivel">Disponível</option>
+                                <option value="todos">Todos</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="submit_btn">
+                            <i class="fas fa-search"></i> Pesquisar
+                        </button>
+                    </form>
+                </div>
+
+                <div id="contact" class="tab_content">
+                    <form id="contact_form">
+                        <div class="input_group">
+                            <i class="fas fa-user icon"></i>
+                            <input type="text" placeholder="Seu Nome" id="name" name="name">
+                        </div>
+                        <div class="input_group">
+                            <i class="fas fa-envelope icon"></i>
+                            <input type="email" placeholder="Seu Email" id="email" name="email">
+                        </div>
+                        <div class="input_group">
+                            <i class="fas fa-comment icon"></i>
+                            <textarea placeholder="Sua Mensagem" id="message" name="message"></textarea>
+                        </div>
+                        <button type="submit" class="submit_btn">
+                            <i class="fas fa-paper-plane"></i> Enviar
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="stats">
+                <div class="stat_item">
+                    <i class="fas fa-book"></i>
+                    <div class="stat_info">
+                        <span class="stat_number">5.000+</span>
+                        <span class="stat_label">Livros</span>
+                    </div>
+                </div>
+                <div class="stat_item">
+                    <i class="fas fa-users"></i>
+                    <div class="stat_info">
+                        <span class="stat_number">2.500+</span>
+                        <span class="stat_label">Usuários</span>
+                    </div>
+                </div>
+                <div class="stat_item">
+                    <i class="fas fa-clock"></i>
+                    <div class="stat_info">
+                        <span class="stat_number">8h - 18h</span>
+                        <span class="stat_label">Horário</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <aside class="right_side">
+            <figure class="img_container">
+                <img src="URL_DA_IMAGEM" alt="Interior da biblioteca">
+                <div class="overlay">
+                    <h3>Conheça nossa biblioteca</h3>
+                    <p>Um espaço de aprendizado e descoberta para todos os estudantes</p>
+                    <a href="#" class="btn_tour">Ver tour virtual <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </figure>
+        </aside>
+    </main>
+
+    <footer>
+        <div class="contact_info">
+            <p><i class="fas fa-map-marker-alt"></i> Endereço da Biblioteca</p>
+            <p><i class="fas fa-phone"></i> (XX) XXXX-XXXX</p>
+            <p><i class="fas fa-envelope"></i> email@biblioteca.com</p>
+        </div>
+        <div class="social_media">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2025 Sistema de Consulta de Livros</p>
+    </footer>
+
+    <script>
+        // Menu Toggle Function
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('navigation').classList.toggle('show');
+        });
+
+        // Tab Switching
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons and contents
+                tabBtns.forEach(b => b.classList.remove('active'));
+                tabContents.forEach(c => c.classList.remove('active'));
+                
+                // Add active class to current button and content
+                btn.classList.add('active');
+                const tabId = btn.getAttribute('data-tab');
+                document.getElementById(`${tabId}-form`).classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
